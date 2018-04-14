@@ -18,9 +18,10 @@ COPY . /root/
 
 # Run script
 CMD \
-  python /root/sabnzbd_influxdb_export.py \
-    --sabnzbdhost=${SABNZBD_HOST} \
-    --sabnzbdport=${SABNZBD_PORT} \
-    --sabnzbdapikey=${SABNZBD_API_KEY} \
+  python /root/qbittorrent_influxdb_export.py \
+    --qbittorrenthost=${QBITTORRENT_HOST} \
+    --qbittorrentport=${QBITTORRENT_PORT} \
+    --qbittorrentuser=${QBITTORRENT_USER} \
+    --qbittorrentpassword=${QBITTORRENT_PASSWORD} \
     --influxdbhost=${INFLUXDB_HOST} \
     --influxdbport=${INFLUXDB_PORT}
